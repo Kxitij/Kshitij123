@@ -37,7 +37,7 @@ def signin(request):
         pass1 = request.POST['pass1']
         lab = request.POST['lab']
 
-        user = authenticate(usn=usn,password=pass1)
+        user = authenticate(username=usn,password=pass1)
 
         if user is not None:
             login(request,user)
@@ -52,5 +52,8 @@ def signin(request):
     return render(request, "LOG/signin.html")
 
 def signout(request):
+    logout(request)
+    messages.success(request, "Logged Out Successfully!!")
     return redirect('home')
+    
 
