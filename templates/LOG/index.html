@@ -168,27 +168,27 @@
 </style>
     <body>
       <div class =login-box>
-        <img src="C:\Users\hp\OneDrive\Desktop\Kshitij123\templates\rit logot.png " class="img2">
-      {% for message in messages %}
-      
-    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-        <strong class="text">Message:</strong> {{ message }}
-        <button type="button" class=".login-button" data-dismiss="alert" aria-label="Close" >
-    <span aria-hidden="true">&times;</span>
-  </button>
-    </div>
-    {% endfor %}
+        <img src="templates\rit logot.png" class="img2">
+  
+     {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <strong class="text">Message:</strong> {{ message }}
+            <button type="button" class=".login-button" data-dismiss="alert" aria-label="Close" >
+            <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+     {% endfor %}
         <h3 class=login-title>MSRIT LAB ATTENDENCE</h3>
-        {% if user.is_authenticated %}
-        
-        <button type="submit" class ="btn-outline-primary"><a href="/signup"> Sign UP</a></button>
-        <button type="submit" class ="btn-outline-primary"><a href="/signin"> Sign IN</a></button>
-        {% else %}
-        <h3 class ="text">Hello {{fname}}!</h3>
-        <h4 class="text">You're successfully logged in.</h4>
-        <button type="submit" class ="btn-outline-primary"><a href="/signout">SignOut</a></button>
-        {% endif %}
-        <script src="" async defer></script>
+    {% if user.is_authenticated %}
+    <h3>Hello {{fname}}!</h3>
+    <h4>You're successfully logged in.</h4>
+    <button type="submit"><a href="/signout">SignOut</a></button>
+    {% else %}
+    <button type="submit"><a href="/signup">SignUp</a></button>
+    <br/>
+    <br/>
+    <button type="submit"><a href="/signin">SignIn</a></button>
+    {% endif %}
   </div>
     </body>
 </html>
