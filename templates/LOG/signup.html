@@ -105,7 +105,7 @@
     }
   
     .btn-outline-primary {
-    margin-left: 730px;
+    
       border-color: #0DB8DE;
       color: #0DB8DE;
       border-radius: 0px;
@@ -154,49 +154,63 @@
    #dropdown option {
     background-color: white; /* Set the background color of the options */
    }
+   .text{
+    color:white;
+
+   }
+   .img2{
+  padding: 5px;
+  width: 400px;
+  height:200px;
+
+   }
+   
 </style>
 
     <body>
-        <h3>Register yourself for the labs!</h3>
+        <div class ="login-box">
+          <img src="C:\Users\hp\OneDrive\Desktop\Kshitij123\templates\rit logot.png " class="img2">
+          <h3 class="text">Register yourself for the labs!</h3>
         <form action="/signup" method="post">
             {% csrf_token %}
-            <label for="">USN</label>
+            <label for="" class="text">USN</label>
             <input type="text" id="USN" name="USN" placeholder="Enter your USN" required>
             <br>
 
-            <label for="">Semester</label>
+            <label for="" class ="text">Semester</label>
             <input type="number" id="sem" name="sem" min=1 max=8 required>
             <br>
 
-            <label for="">Department</label>
+            <label for="" class="text">Department</label>
             <input type="text" id="dept" name="dept" placeholder="Enter your Department" required>
             <br>
 
-            <label for="">First Name</label>
+            <label for="" class="text">First Name</label>
             <input type="text" id="fname" name="fname" placeholder="Enter your First Name" required>
             <br>
 
-            <label for="">Last Name</label>
+            <label for="" class="text">Last Name</label>
             <input type="text" id="lname" name="lname" placeholder="Enter your Last Name" required>
             <br>
 
-            <label for="">Email Address</label>
+            <label for="" class="text">Email Address</label>
             <input type="email" id="email" name="email" placeholder="Enter your Email Address" required>
             <br>
 
-            <label for="">Password</label>
+            <label for="" class="text">Password</label>
             <input type="password" id="pass1" name="pass1" placeholder="Set a Password" required>
             <br>
 
-            <label for="">Confirm Password</label>
+            <label for="" class="text">Confirm Password</label>
             <input type="password" id="pass2" name="pass2" placeholder="Confirm your Password" required>
             <br>
 
 
-            <button type="submit">Sign Up</button>
+            <button type="submit"  class ="btn-outline-primary">Sign Up</button>
             
 
         </form>
         <script src="" async defer></script>
+      </div>
     </body>
 </html>

@@ -105,7 +105,7 @@
   }
 
   .btn-outline-primary {
-  margin-left: 730px;
+ 
     border-color: #0DB8DE;
     color: #0DB8DE;
     border-radius: 0px;
@@ -154,6 +154,18 @@
  #dropdown option {
   background-color: white; /* Set the background color of the options */
  }
+ .img2{
+  margin-left:50px;
+  border-radius: 4px;
+  padding: 5px;
+  width: 400px;
+  height:200px;
+
+   }
+   .text{
+    color:white;
+
+   }
 </style>
 <body>
   <div class="container">
@@ -163,7 +175,9 @@
         <div class="col-lg-12 login-key">
           <i class="fa fa-key" aria-hidden="true"></i>
         </div>
+        <img src="C:\Users\hp\OneDrive\Desktop\Kshitij123\templates\rit logot.png " class="img2">
         <div class="col-lg-12 login-title">
+          
           ATTENDENCE LOGIN
         </div>
   <form action="/signin" method="post">
@@ -171,7 +185,7 @@
       <div class="col-lg-12 login-form">
         <div class="col-lg-12 login-form">
           <div class="form-group">
-            <label for="">USN</label>
+            <label for="" class="text">USN</label>
       <input type="text" id="USN" name="USN" placeholder="Enter your USN" required>
       <br>
 
@@ -179,12 +193,12 @@
       <div class="col-lg-12 login-form">
         <div class="col-lg-12 login-form">
           <div class="form-group">
-      <label for="">Password</label>
+      <label for="" class="text">Password</label>
       <input type="password" id="pass1" name="pass1" placeholder="Enter Password" required>
       <br>
 
       <div class="form -group">
-        <label for="">Select your LAB:</label>
+        <label for="" class="text">Select your LAB:</label>
         <Select id"lab" id="lab" name="lab" placeholder="Select your lab" >
         <option value="OOPs LAB">OOPs LAB</option>
         <option value="DS LAB">DS LAB</option>
@@ -198,7 +212,7 @@
       
 
 
-      <button type="submit">Sign In</button>
+      <button type="submit" class="btn-outline-primary">Sign In</button>
       
 
   </form> 
