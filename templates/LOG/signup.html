@@ -1,3 +1,4 @@
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -169,7 +170,7 @@
 
     <body>
         <div class ="login-box">
-          <img src="C:\Users\hp\OneDrive\Desktop\Kshitij123\templates\rit logot.png " class="img2">
+          <img src="{% static 'images/rit.png' %}" class="img2">
           <h3 class="text">Register yourself for the labs!</h3>
         <form action="/signup" method="post">
             {% csrf_token %}
